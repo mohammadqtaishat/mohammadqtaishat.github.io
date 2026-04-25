@@ -1,36 +1,40 @@
-title: "Studio NULL"
-tagline: "Design Technologist · Computational Architect"
-description: >
-  Autonomous design systems, generative tower typologies,
-  and IFC-compliant BIM orchestration at the intersection
-  of computation and architecture.
+title: "MOHAMMAD QTAISHAT"
+tagline: "Design Technologist & Computational Architect"
+description: "7+ years delivering high-performance buildings through advanced computation, generative AI, and BIM orchestration."
 author:
-  name: "Elia Voss"
-  email: "elia.voss@studionull.io"
-  location: "Zürich — Rotterdam — Remote"
-url: "https://studionull.io"
-baseurl: ""
+  name: "Mohammad Qtaishat"
+  email: "mohammadqtaishat95@gmail.com"
+  phone: "+1 (708) 634-9751"
+  location: "Orland Park, IL"
+  linkedin: "https://www.linkedin.com/in/mohammad-qtaishat-132a00109/"
 
-# Build
+baseurl: ""
+url: ""
+
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
-timezone: Europe/Zurich
+permalink: /:categories/:title/
 
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# Sass
 sass:
   sass_dir: _sass
   style: compressed
 
-# Exclude
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - vendor
   - README.md
-  - .git
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+timezone: "America/Chicago"
+lang: "en"
