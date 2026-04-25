@@ -1,0 +1,259 @@
+---
+layout: default
+title: null
+---
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-kicker" aria-hidden="true">
+      <span class="kicker-line"></span>
+      <span class="kicker-text">{{ site.author.location }}</span>
+    </div>
+
+    <h1 class="hero-heading" id="hero-heading">
+      <span class="hero-heading__line hero-heading__line--sm">
+        {{ site.author.name }}
+      </span>
+      <span class="hero-heading__line hero-heading__line--lg">
+        Computational<br />Architect
+      </span>
+    </h1>
+
+    <p class="hero-bio">{{ site.data.profile.bio }}</p>
+
+    <div class="hero-meta" aria-label="Availability status">
+      <span class="meta-pill">
+        <span class="meta-pill__dot" aria-hidden="true"></span>
+        {{ site.data.profile.availability }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Decorative coordinate grid -->
+  <div class="hero-coords" aria-hidden="true">
+    <span>47.3769° N</span>
+    <span>8.5417° E</span>
+    <span>ALT 408m</span>
+  </div>
+
+  <!-- Scroll cue -->
+  <a href="#work" class="scroll-cue" aria-label="Scroll to work">
+    <span class="scroll-cue__label">scroll</span>
+    <span class="scroll-cue__line"></span>
+  </a>
+</section>
+
+
+<!-- ===================================================
+     TOOLS / DISCIPLINES RIBBON
+=================================================== -->
+<aside class="tools-ribbon" aria-label="Core technologies">
+  <div class="ribbon-track" aria-hidden="true">
+    {% for tool in site.data.profile.tools.primary %}
+      <span class="ribbon-item">{{ tool }}</span>
+      <span class="ribbon-sep">·</span>
+    {% endfor %}
+    {% for tool in site.data.profile.tools.ai_ml %}
+      <span class="ribbon-item">{{ tool }}</span>
+      <span class="ribbon-sep">·</span>
+    {% endfor %}
+    {% for tool in site.data.profile.tools.bim %}
+      <span class="ribbon-item">{{ tool }}</span>
+      <span class="ribbon-sep">·</span>
+    {% endfor %}
+    <!-- Duplicate for seamless scroll -->
+    {% for tool in site.data.profile.tools.primary %}
+      <span class="ribbon-item">{{ tool }}</span>
+      <span class="ribbon-sep">·</span>
+    {% endfor %}
+  </div>
+</aside>
+
+
+<!-- ===================================================
+     WORK — PROJECT GRID
+=================================================== -->
+<section class="work-section" id="work" aria-labelledby="work-heading">
+
+  <header class="section-header">
+    <div class="section-label" aria-hidden="true">02 / WORK</div>
+    <h2 class="section-heading" id="work-heading">Selected Projects</h2>
+    <p class="section-sub">
+      {{ site.data.projects | size }} projects &mdash;
+      {{ site.data.projects | where: "category", "tower" | size }} towers,
+      {{ site.data.projects | where: "category", "tool" | size }} tools,
+      {{ site.data.projects | where: "category", "research" | size }} research
+    </p>
+  </header>
+
+  <!-- Featured row (2 large cards) -->
+  <div class="project-grid project-grid--featured" role="list">
+    {% assign featured = site.data.projects | where: "featured", true %}
+    {% for project in featured limit: 2 %}
+      <article class="project-card project-card--large" role="listitem"
+               data-category="{{ project.category }}"
+               data-id="{{ project.id }}">
+
+        <div class="card-image-wrap">
+          <img
+            src="{{ project.image }}"
+            alt="{{ project.title }} — {{ project.subtitle }}"
+            class="card-image"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="card-image-overlay" aria-hidden="true">
+            <svg class="overlay-grid" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid-{{ project.id }}" width="20" height="20"
+                         patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none"
+                        stroke="currentColor" stroke-width="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%"
+                    fill="url(#grid-{{ project.id }})"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-year">{{ project.year }}</span>
+            <span class="card-cat">{{ project.category | upcase }}</span>
+            <span class="card-status card-status--{{ project.status | slugify }}">
+              {{ project.status }}
+            </span>
+          </div>
+
+          <h3 class="card-title">{{ project.title }}</h3>
+          <p class="card-subtitle">{{ project.subtitle }}</p>
+          <p class="card-desc">{{ project.description | truncatewords: 36 }}</p>
+
+          <dl class="card-metrics" aria-label="Project metrics">
+            {% for metric in project.metrics %}
+              <div class="metric-item">
+                <dd class="metric-value">{{ metric.value }}</dd>
+                <dt class="metric-label">{{ metric.label }}</dt>
+              </div>
+            {% endfor %}
+          </dl>
+
+          <ul class="card-tags" aria-label="Technologies">
+            {% for tag in project.tech limit: 4 %}
+              <li class="tag">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <!-- Standard grid (remaining projects) -->
+  <div class="project-grid project-grid--standard" role="list">
+    {% for project in site.data.projects %}
+      {% if project.featured == false %}
+        <article class="project-card project-card--standard" role="listitem"
+                 data-category="{{ project.category }}"
+                 data-id="{{ project.id }}">
+
+          <div class="card-image-wrap">
+            <img
+              src="{{ project.thumb }}"
+              alt="{{ project.title }}"
+              class="card-image"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="card-image-overlay" aria-hidden="true">
+              <svg class="overlay-grid" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="sgrid-{{ project.id }}" width="16" height="16"
+                           patternUnits="userSpaceOnUse">
+                    <path d="M 16 0 L 0 0 0 16" fill="none"
+                          stroke="currentColor" stroke-width="0.4"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%"
+                      fill="url(#sgrid-{{ project.id }})"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-year">{{ project.year }}</span>
+              <span class="card-cat">{{ project.category | upcase }}</span>
+            </div>
+            <h3 class="card-title">{{ project.title }}</h3>
+            <p class="card-subtitle">{{ project.subtitle }}</p>
+            <ul class="card-tags">
+              {% for tag in project.tech limit: 3 %}
+                <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</section>
+
+
+<!-- ===================================================
+     PROFILE
+=================================================== -->
+<section class="profile-section" id="profile" aria-labelledby="profile-heading">
+
+  <header class="section-header">
+    <div class="section-label" aria-hidden="true">03 / PROFILE</div>
+    <h2 class="section-heading" id="profile-heading">Background</h2>
+  </header>
+
+  <div class="profile-grid">
+
+    <div class="profile-col profile-col--bio">
+      <p class="profile-bio">{{ site.data.profile.bio }}</p>
+
+      <div class="profile-education">
+        <h3 class="profile-sub-heading">Education</h3>
+        {% for edu in site.data.profile.education %}
+          <div class="edu-item">
+            <span class="edu-degree">{{ edu.degree }}</span>
+            <span class="edu-inst">{{ edu.institution }}</span>
+            <span class="edu-year">{{ edu.year }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="profile-col profile-col--skills">
+      <h3 class="profile-sub-heading">Specialisms</h3>
+      <ul class="specialism-list">
+        {% for spec in site.data.profile.specialisms %}
+          <li class="specialism-item">
+            <span class="spec-index" aria-hidden="true">
+              {{ forloop.index | prepend: "0" | slice: -2, 2 }}
+            </span>
+            {{ spec }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="profile-col profile-col--pubs">
+      <h3 class="profile-sub-heading">Publications</h3>
+      {% for pub in site.data.profile.publications %}
+        <div class="pub-item">
+          <a href="{{ pub.url }}" class="pub-title">{{ pub.title }}</a>
+          <span class="pub-venue">{{ pub.venue }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
