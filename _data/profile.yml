@@ -1,0 +1,54 @@
+name: "Elia Voss"
+title: "Design Technologist & Computational Architect"
+location: "Zürich, CH"
+availability: "Open to collaborative research engagements — Q4 2025"
+
+bio: >
+  I operate at the threshold between parametric design intelligence and
+  large-scale architectural production. My practice builds autonomous
+  pipelines that translate generative AI outputs into IFC-compliant BIM
+  deliverables — collapsing the distance between conceptual massing and
+  fabrication-ready documentation. I have directed computational workflows
+  for supertall typologies in the 300m–500m range across Southeast Asia,
+  the Gulf, and Central Europe.
+
+specialisms:
+  - "Supertall & Megatall Tower Massing (300m–500m+)"
+  - "Generative AI Integration for Architectural Optimization"
+  - "Rhino 3D / Grasshopper Parametric Orchestration"
+  - "IFC 4.3 Compliant BIM Workflow Automation"
+  - "Python & C# Scripting (RhinoCommon, OpenCascade)"
+  - "Automated Metadata Scrubbing & Model Auditing"
+  - "Structural–Façade Performance Simulation (Karamba3D, Ladybug)"
+  - "Algorithmic Urban Massing & Zoning Compliance"
+
+tools:
+  primary: ["Rhino 3D", "Grasshopper", "Revit", "Python", "C#"]
+  secondary: ["Blender", "Houdini", "QGIS", "Docker", "Git"]
+  ai_ml: ["PyTorch", "Stable Diffusion (ComfyUI)", "LangChain", "OpenAI API"]
+  bim: ["IFC OpenShell", "IfcPatch", "BIMCollab", "Solibri", "Navisworks"]
+
+education:
+  - degree: "MArch II, Computational Design"
+    institution: "ETH Zürich"
+    year: "2017"
+  - degree: "BArch, Architecture"
+    institution: "TU Delft"
+    year: "2014"
+
+publications:
+  - title: "Autonomous IFC Generation from Latent Diffusion Prompts"
+    venue: "ACADIA 2024"
+    url: "#"
+  - title: "Graph Neural Networks for Structural Topology in Tall Buildings"
+    venue: "SimAUD 2023"
+    url: "#"
+  - title: "Metadata Hygiene at Scale: BIM Auditing with Python"
+    venue: "BIM World Munich 2022"
+    url: "#"
+
+contact:
+  email: "elia.voss@studionull.io"
+  github: "github.com/eliavoss-null"
+  linkedin: "linkedin.com/in/eliavoss"
+  are_na: "are.na/elia-voss"
