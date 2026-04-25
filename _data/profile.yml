@@ -1,54 +1,120 @@
-name: "Elia Voss"
+name: "Mohammad Qtaishat"
 title: "Design Technologist & Computational Architect"
-location: "Zürich, CH"
-availability: "Open to collaborative research engagements — Q4 2025"
+tagline: "Synthesizing generative intelligence with architectural precision."
+location: "Orland Park, IL"
+email: "mohammadqtaishat95@gmail.com"
+phone: "+1 (708) 634-9751"
+linkedin: "https://www.linkedin.com/in/mohammad-qtaishat-132a00109/"
 
 bio: >
-  I operate at the threshold between parametric design intelligence and
-  large-scale architectural production. My practice builds autonomous
-  pipelines that translate generative AI outputs into IFC-compliant BIM
-  deliverables — collapsing the distance between conceptual massing and
-  fabrication-ready documentation. I have directed computational workflows
-  for supertall typologies in the 300m–500m range across Southeast Asia,
-  the Gulf, and Central Europe.
+  Architect and design technologist with 7+ years of global experience delivering
+  high-performance, sustainable buildings across diverse typologies. Recognized for
+  leading multidisciplinary teams, driving conceptual and technical design phases, and
+  elevating project outcomes through advanced computation, automation, and visual
+  communication. Proven strength in managing full project lifecycles — from schematic
+  design through construction documentation — while coordinating with internal and
+  external stakeholders. Passionate about integrated design and data-driven solutions
+  that align with firm values and design excellence.
 
-specialisms:
-  - "Supertall & Megatall Tower Massing (300m–500m+)"
-  - "Generative AI Integration for Architectural Optimization"
-  - "Rhino 3D / Grasshopper Parametric Orchestration"
-  - "IFC 4.3 Compliant BIM Workflow Automation"
-  - "Python & C# Scripting (RhinoCommon, OpenCascade)"
-  - "Automated Metadata Scrubbing & Model Auditing"
-  - "Structural–Façade Performance Simulation (Karamba3D, Ladybug)"
-  - "Algorithmic Urban Massing & Zoning Compliance"
+skills:
+  - category: "Design + BIM"
+    icon: "◈"
+    items:
+      - "McNeel Rhino"
+      - "Autodesk Revit"
+      - "Autodesk 3dsMAX"
+      - "Autodesk AutoCAD"
+      - "Blender"
+      - "SketchUp"
+  - category: "Automation + Analysis"
+    icon: "⬡"
+    items:
+      - "Grasshopper — Rhino"
+      - "Dynamo — Revit"
+      - "Rhino.Inside.Revit"
+      - "Python"
+      - "C#"
+  - category: "Visualization"
+    icon: "◻"
+    items:
+      - "Unreal Engine 5"
+      - "V-Ray — 3dsMax"
+      - "Enscape / D5"
+      - "Adobe Creative Cloud"
+  - category: "Coordination"
+    icon: "▦"
+    items:
+      - "BIM 360 / ACC"
+      - "Office 365"
+      - "Bluebeam"
+  - category: "Fabrication"
+    icon: "⬟"
+    items:
+      - "3D Printing"
+      - "Laser Cutting"
+      - "CNC Workflows"
 
-tools:
-  primary: ["Rhino 3D", "Grasshopper", "Revit", "Python", "C#"]
-  secondary: ["Blender", "Houdini", "QGIS", "Docker", "Git"]
-  ai_ml: ["PyTorch", "Stable Diffusion (ComfyUI)", "LangChain", "OpenAI API"]
-  bim: ["IFC OpenShell", "IfcPatch", "BIMCollab", "Solibri", "Navisworks"]
+experience:
+  - company: "Adrian Smith + Gordon Gill Architecture"
+    short: "AS+GG"
+    location: "Chicago, IL, USA"
+    role: "Senior Design Architect"
+    period: "May 2023 – Present"
+    highlights:
+      - "Led sustainable and computational design for complex high-performance buildings, integrating energy modeling and space optimization strategies."
+      - "Utilized parametric tools (Rhino, Grasshopper, Python) to streamline feasibility studies and develop performance-driven planning schemes."
+      - "Mentored team members in computational workflows and performance-based design methods."
+      - "Researched and implemented AI and ML workflows for site analysis, generative massing, and decision-making frameworks."
+
+  - company: "Omrania and Associates"
+    short: "OMRANIA"
+    location: "Riyadh, KSA"
+    role: "Design Architect"
+    period: "Nov 2019 – May 2023"
+    highlights:
+      - "Delivered 18+ projects across cultural, institutional, and residential sectors, managing full lifecycle design and BIM coordination."
+      - "Applied Rhino.Inside + Revit workflows to align architectural, engineering, and real estate data."
+      - "Automated key design tasks using Python and Grasshopper to optimize project timelines and accuracy."
+      - "Led code-compliant design documentation aligned with LEED goals and Saudi Building Code."
+
+  - company: "Sahel Al-Hiyari Architects"
+    short: "SHA"
+    location: "Amman, Jordan"
+    role: "Junior Architect"
+    period: "Apr 2018 – Nov 2019"
+    highlights:
+      - "Designed and developed feasibility options and prepared construction drawings."
+      - "Evaluated innovative materials and finishes based on performance and lifecycle requirements."
+
+  - company: "Hamadani Architects (IAESTE)"
+    short: "IAESTE"
+    location: "Tunisia"
+    role: "Intern Architect"
+    period: "Jan 2018 – Apr 2018"
+    highlights:
+      - "International exchange placement contributing to live project documentation and conceptual design."
 
 education:
-  - degree: "MArch II, Computational Design"
-    institution: "ETH Zürich"
+  - institution: "The University of Jordan"
+    location: "Amman, Jordan"
+    degree: "Bachelor of Architectural Engineering"
+    period: "2014 – 2019"
+
+awards:
+  - title: "Tamayouz Excellence Award"
+    detail: "Top 20 International Graduation Projects 2019 — 908 submissions"
+    year: "2019"
+  - title: "Omrania CSBE Honorable Mention"
+    detail: "12th Cycle"
+    year: "2019"
+  - title: "5SRW Best of the Year"
     year: "2017"
-  - degree: "BArch, Architecture"
-    institution: "TU Delft"
-    year: "2014"
+  - title: "Interior PH Cover Page"
+    detail: "Spring Edition, 11th Issue"
+    year: "2018"
 
-publications:
-  - title: "Autonomous IFC Generation from Latent Diffusion Prompts"
-    venue: "ACADIA 2024"
-    url: "#"
-  - title: "Graph Neural Networks for Structural Topology in Tall Buildings"
-    venue: "SimAUD 2023"
-    url: "#"
-  - title: "Metadata Hygiene at Scale: BIM Auditing with Python"
-    venue: "BIM World Munich 2022"
-    url: "#"
-
-contact:
-  email: "elia.voss@studionull.io"
-  github: "github.com/eliavoss-null"
-  linkedin: "linkedin.com/in/eliavoss"
-  are_na: "are.na/elia-voss"
+languages:
+  - name: "English"
+    level: "Fluent"
+  - name: "Arabic"
+    level: "Native"
