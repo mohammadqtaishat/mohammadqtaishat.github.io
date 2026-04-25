@@ -290,8 +290,8 @@ body:has(button:hover) .cursor {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--gutter);
-  container-type: inline-size;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero-label {
@@ -323,8 +323,9 @@ body:has(button:hover) .cursor {
 .hero-name-first,
 .hero-name-last {
   display: block;
-  font-size: clamp(4.5rem, 13cqw, 11rem);
+  font-size: clamp(2.5rem, 7.5vw, 9rem);
   position: relative;
+  white-space: nowrap;
 }
 
 .hero-name-first { color: var(--text); }
