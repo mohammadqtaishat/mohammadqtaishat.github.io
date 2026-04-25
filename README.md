@@ -1,3 +1,0 @@
-# mohammadqtaishat.github.io
-
-Protfolio 
