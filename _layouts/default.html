@@ -1,86 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="null">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ site.description }}" />
-  <title>
-    {% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}
-  </title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <meta name="author" content="{{ site.author.name }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description }}" />
+  <meta property="og:type" content="website" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
   {% seo %}
 </head>
-
 <body>
 
-  <!-- Grid overlay (purely decorative) -->
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Grid overlay -->
   <div class="grid-overlay" aria-hidden="true"></div>
 
-  <!-- ===== SITE HEADER ===== -->
+  <!-- Header / Nav -->
   <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="{{ '/' | relative_url }}" class="site-wordmark" aria-label="{{ site.title }} — home">
-        <span class="wordmark-title">{{ site.title }}</span>
-        <span class="wordmark-tag">{{ site.tagline }}</span>
+    <nav class="nav-inner" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="Home">
+        <span class="logo-name">MQ</span>
+        <span class="logo-divider">|</span>
+        <span class="logo-role">Design Technologist</span>
       </a>
-
-      <nav class="site-nav" role="navigation" aria-label="Primary navigation">
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#profile" class="nav-link">Profile</a>
-        <a href="mailto:{{ site.author.email }}" class="nav-link nav-link--contact">Contact</a>
-      </nav>
-    </div>
-    <!-- Signal bar -->
-    <div class="header-signal" aria-hidden="true">
-      <span class="signal-label">SYS_ONLINE</span>
-      <span class="signal-dot"></span>
-    </div>
+      <ul class="nav-links" role="list">
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#awards" class="nav-link">Awards</a></li>
+        <li>
+          <a href="mailto:{{ site.author.email }}" class="nav-cta">
+            <span>Contact</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- Main Content -->
   <main id="main-content" role="main">
     {{ content }}
   </main>
 
-  <!-- ===== SITE FOOTER ===== -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <div class="footer-col">
-        <p class="footer-label">Location</p>
-        <p class="footer-value">{{ site.author.location }}</p>
+      <div class="footer-left">
+        <p class="footer-name">{{ site.author.name }}</p>
+        <p class="footer-meta">{{ site.author.location }} &nbsp;/&nbsp; {{ site.author.email }}</p>
       </div>
-      <div class="footer-col">
-        <p class="footer-label">Contact</p>
-        <a href="mailto:{{ site.author.email }}" class="footer-value footer-link">
-          {{ site.author.email }}
-        </a>
-      </div>
-      <div class="footer-col footer-col--right">
-        <p class="footer-label">Index</p>
-        <p class="footer-value footer-mono">
-          {{ site.time | date: "%Y" }} / NULL / v2.4.1
+      <div class="footer-center">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> — All rights reserved.
         </p>
       </div>
-    </div>
-    <div class="footer-rule">
-      <span class="footer-copy">
-        © {{ site.time | date: "%Y" }} {{ site.author.name }}
-      </span>
-      <span class="footer-sys" aria-hidden="true">
-        PROCESS COMPLETE // EOF
-      </span>
+      <div class="footer-right">
+        <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer-link">
+          LinkedIn
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
   <!-- JS -->
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
