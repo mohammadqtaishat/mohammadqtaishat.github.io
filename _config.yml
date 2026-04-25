@@ -1,9 +1,36 @@
-title: Mohammad Qtaishat
-email: mohammad@qtaishat.com
-description: >-
-  Portfolio and professional architecture documentation.
-theme: minima
-header_pages:
-  - index.md
-  - experience.md
-  - technical_skills.md
+title: "Studio NULL"
+tagline: "Design Technologist · Computational Architect"
+description: >
+  Autonomous design systems, generative tower typologies,
+  and IFC-compliant BIM orchestration at the intersection
+  of computation and architecture.
+author:
+  name: "Elia Voss"
+  email: "elia.voss@studionull.io"
+  location: "Zürich — Rotterdam — Remote"
+url: "https://studionull.io"
+baseurl: ""
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+timezone: Europe/Zurich
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - .git
