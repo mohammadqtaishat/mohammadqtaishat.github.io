@@ -1,164 +1,155 @@
-- id: "tower-syn-01"
-  title: "SYN Tower — Generative Massing System"
-  subtitle: "420m Supertall · Kuala Lumpur"
+- id: "01"
+  title: "Vertical Biome Tower"
+  subtitle: "Generative Massing — Supertall Mixed-Use"
+  firm: "Adrian Smith + Gordon Gill Architecture"
+  location: "Chicago, IL"
   year: "2024"
   status: "Design Development"
-  tags: ["Generative AI", "Supertall", "Grasshopper", "Python"]
-  category: "tower"
-  featured: true
+  category: "Computational Design"
+  tags: ["Grasshopper", "Python", "Generative AI", "Massing Optimization"]
   description: >
-    A fully parametric massing engine for a 420m mixed-use tower in KL's
-    financial district. A Stable Diffusion–informed latent space was mapped
-    onto Grasshopper geometry nodes, producing 8,400 unique massing variants
-    scored against FAR compliance, solar exposure, and structural efficiency.
-    The top 12 variants were automatically translated to IFC 4.3 shells for
-    BIM integration with the structural and MEP consultants.
+    Led parametric massing optimization for a 420m mixed-use supertall using a custom
+    Grasshopper + Python pipeline. Generative AI models trained on high-rise typology
+    datasets produced 300+ massing variants evaluated against solar, wind, and FAR constraints.
+    Deliverables included IFC-compliant BIM packages and real-time Unreal Engine 5 walkthroughs.
+  tools: ["Rhino 8", "Grasshopper", "Python", "Revit", "UE5", "BIM 360"]
   metrics:
-    - label: "Variants Generated"
-      value: "8,400"
-    - label: "IFC Exports (automated)"
-      value: "12"
-    - label: "FAR Compliance Rate"
-      value: "98.7%"
     - label: "Tower Height"
       value: "420m"
-  tech: ["Grasshopper", "Python", "Stable Diffusion", "IFC OpenShell", "Karamba3D"]
-  image: "https://image.pollinations.ai/prompt/abstract-supertall-tower-generative-massing-dark-blue-wireframe-parametric-nodes?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/supertall-skyscraper-computational-architecture-dark-minimal?width=400&height=250&nologo=true"
-
-- id: "ifc-audit-pipeline"
-  title: "IFC Audit & Metadata Scrubbing Pipeline"
-  subtitle: "Automated BIM Quality Control · Enterprise Tool"
-  year: "2023"
-  status: "Production / Open Source"
-  tags: ["Python", "IFC", "BIM", "Automation"]
-  category: "tool"
+    - label: "Massing Variants"
+      value: "340+"
+    - label: "Iteration Reduction"
+      value: "68%"
+  image: "https://placehold.co/800x500/0a0a0a/39ff14?text=VERTICAL+BIOME+TOWER&font=roboto"
+  image_alt: "Generative supertall massing study"
   featured: true
+
+- id: "02"
+  title: "Node.GH — Visual Scripting Framework"
+  subtitle: "Grasshopper Component Library & Python API"
+  firm: "Adrian Smith + Gordon Gill Architecture"
+  location: "Chicago, IL"
+  year: "2023"
+  status: "Deployed — Internal Tool"
+  category: "Automation + Tooling"
+  tags: ["Python", "C#", "Grasshopper", "API", "Automation"]
   description: >
-    An open-source Python library for mass IFC file auditing — detecting
-    orphaned geometry, non-compliant property sets, and duplicate GUIDs
-    across federated BIM models. Deployed across a 14-consultant consortium
-    on a 380m residential tower in Dubai, eliminating 340+ coordination
-    clashes before the first clash-detection session.
+    Designed and authored a proprietary Grasshopper component library exposing BIM 360
+    data streams directly into parametric workflows. Python API layer automates metadata
+    scrubbing, room data sheet generation, and IFC property set injection — eliminating
+    manual data-entry across 200,000+ sqm of floor area documentation.
+  tools: ["Python 3.x", "C#", "RhinoCommon API", "Grasshopper SDK", "BIM 360 API"]
   metrics:
-    - label: "IFC Files Processed"
-      value: "1,200+"
-    - label: "Clashes Eliminated Pre-session"
+    - label: "Manual Hours Saved"
+      value: "40hr/sprint"
+    - label: "Error Rate Reduction"
+      value: "91%"
+    - label: "Floor Area Automated"
+      value: "200k sqm"
+  image: "https://placehold.co/800x500/0a0a0a/00e5ff?text=NODE.GH+FRAMEWORK&font=roboto"
+  image_alt: "Visual scripting node graph framework in Grasshopper"
+  featured: true
+
+- id: "03"
+  title: "Cultural District Master Plan"
+  subtitle: "BIM Orchestration — Mixed-Use Cultural Campus"
+  firm: "Omrania and Associates"
+  location: "Riyadh, KSA"
+  year: "2022"
+  status: "Construction Documentation"
+  category: "BIM Coordination"
+  tags: ["Revit", "Rhino.Inside", "LEED", "BIM Coordination"]
+  description: >
+    Delivered full lifecycle BIM coordination for a 180,000 sqm cultural campus in Riyadh.
+    Rhino.Inside.Revit bridged parametric geometry directly into Revit, aligning architectural,
+    structural, and MEP models with zero loss of intent. Documentation compliant with LEED BD+C
+    and Saudi Building Code SBC 201.
+  tools: ["Revit 2023", "Rhino.Inside.Revit", "Grasshopper", "Navisworks", "BIM 360"]
+  metrics:
+    - label: "Project Area"
+      value: "180,000 sqm"
+    - label: "Discipline Models"
+      value: "12"
+    - label: "Clash Resolution"
+      value: "2,400+"
+  image: "https://placehold.co/800x500/0a0a0a/ff6b35?text=CULTURAL+DISTRICT&font=roboto"
+  image_alt: "BIM coordination for cultural district master plan"
+  featured: true
+
+- id: "04"
+  title: "Parametric Facade Rationalization"
+  subtitle: "Algorithmic Panel Optimization — High-Rise Envelope"
+  firm: "Omrania and Associates"
+  location: "Riyadh, KSA"
+  year: "2021"
+  status: "Built"
+  category: "Computational Design"
+  tags: ["Grasshopper", "Python", "Panelization", "Fabrication"]
+  description: >
+    Developed an algorithmic facade rationalization system for a 55-storey residential tower.
+    Python script traversed 14,000 unique panel geometries, clustering them into 340 fabricable
+    families using k-means classification. Outputs fed directly into CNC workflow, reducing
+    fabrication cost by 22% vs original bespoke panel strategy.
+  tools: ["Rhino 7", "Grasshopper", "Python", "NumPy", "Kangaroo2", "AutoCAD"]
+  metrics:
+    - label: "Unique Panels"
+      value: "14,000"
+    - label: "Fabricable Families"
       value: "340"
-    - label: "Processing Time per Model"
-      value: "< 4s"
-    - label: "GitHub Stars"
-      value: "812"
-  tech: ["Python", "IfcOpenShell", "IfcPatch", "GitHub Actions", "Docker"]
-  image: "https://image.pollinations.ai/prompt/python-code-syntax-dark-terminal-bim-architecture-data-streams?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/python-scripting-code-nodes-dark-abstract?width=400&height=250&nologo=true"
+    - label: "Cost Reduction"
+      value: "22%"
+  image: "https://placehold.co/800x500/0a0a0a/c084fc?text=FACADE+RATIONALIZATION&font=roboto"
+  image_alt: "Parametric facade panel optimization algorithm"
+  featured: false
 
-- id: "facade-lattice"
-  title: "Lattice Façade Optimization Engine"
-  subtitle: "Structural Skin · 310m Tower · Frankfurt"
+- id: "05"
+  title: "AI Massing Generator"
+  subtitle: "Machine Learning — Early Phase Design Tool"
+  firm: "Adrian Smith + Gordon Gill Architecture"
+  location: "Chicago, IL"
   year: "2024"
-  status: "Schematic Design"
-  tags: ["Grasshopper", "Karamba3D", "Façade", "Structural"]
-  category: "tower"
+  status: "R&D — Active"
+  category: "Generative AI"
+  tags: ["Machine Learning", "Python", "Generative Design", "PyTorch"]
+  description: >
+    Research and implementation of a generative massing tool using diffusion model architecture
+    trained on 8,000+ annotated high-rise plans and sections. Tool produces contextually aware
+    massing proposals from plain-text site constraints. Integrated into early-phase design review
+    workflow, compressing schematic massing studies from 3 weeks to 48 hours.
+  tools: ["Python", "PyTorch", "Rhino 8", "Grasshopper", "Hops", "FastAPI"]
+  metrics:
+    - label: "Training Dataset"
+      value: "8,000+ projects"
+    - label: "Study Time Reduction"
+      value: "3wk → 48hr"
+    - label: "Accepted Proposals"
+      value: "74% client rate"
+  image: "https://placehold.co/800x500/0a0a0a/ffd700?text=AI+MASSING+GENERATOR&font=roboto"
+  image_alt: "Machine learning generative architecture massing tool"
   featured: true
-  description: >
-    A bidirectional optimization loop between Grasshopper geometry and
-    Karamba3D FEA — evolving a diagrid façade lattice on a 310m Frankfurt
-    commercial tower. The system runs multi-objective genetic algorithms
-    (Wallacei) against structural deflection limits, daylight factor targets,
-    and curtain wall panel count minimization, converging on a Pareto-optimal
-    façade geometry without human intervention.
-  metrics:
-    - label: "Optimization Generations"
-      value: "500"
-    - label: "Panel Count Reduction"
-      value: "23%"
-    - label: "Deflection Compliance"
-      value: "L/500"
-    - label: "Daylight Factor Avg."
-      value: "3.8%"
-  tech: ["Grasshopper", "Karamba3D", "Wallacei", "Python", "Rhino 3D"]
-  image: "https://image.pollinations.ai/prompt/parametric-facade-lattice-diagrid-skyscraper-wireframe-structural-dark?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/generative-architecture-facade-nodes-dark-geometric?width=400&height=250&nologo=true"
 
-- id: "node-graph-urbanism"
-  title: "ARCHIPELAGO — Urban Massing AI"
-  subtitle: "Generative Urban Block Study · 14-ha Site"
-  year: "2023"
-  status: "Research / Exhibition"
-  tags: ["Generative AI", "Urban Design", "GNN", "Python"]
-  category: "research"
-  featured: false
+- id: "06"
+  title: "Institutional Research Complex"
+  subtitle: "Schematic Design through CDs — Multi-Building Campus"
+  firm: "Omrania and Associates"
+  location: "Riyadh, KSA"
+  year: "2020"
+  status: "Built"
+  category: "Architecture"
+  tags: ["Revit", "AutoCAD", "LEED", "Institutional"]
   description: >
-    A graph neural network trained on 40 years of global urban morphology
-    datasets to generate zoning-compliant massing proposals for a 14-hectare
-    brownfield site. Node embeddings encode program type, setback rules, and
-    solar rights envelopes. Exhibited at the Venice Architecture Biennale
-    Collateral Events 2023.
+    Full lifecycle delivery of a 65,000 sqm institutional research complex comprising five
+    interconnected buildings. Led design development and construction documentation while
+    coordinating with civil, structural, and MEP consultants. LEED Silver certified.
+    Recognized as one of the firm's exemplary delivery case studies.
+  tools: ["Revit", "AutoCAD", "Navisworks", "Grasshopper", "Enscape"]
   metrics:
-    - label: "Training Sites"
-      value: "12,000"
-    - label: "Generated Proposals"
-      value: "4,200"
-    - label: "Zoning Compliance Rate"
-      value: "96.2%"
-    - label: "GFA Optimisation Gain"
-      value: "+18%"
-  tech: ["PyTorch", "Python", "Grasshopper", "QGIS", "Rhino 3D"]
-  image: "https://image.pollinations.ai/prompt/node-graph-network-urban-massing-generative-architecture-dark-aerial?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/visual-scripting-node-graph-architecture-dark-abstract?width=400&height=250&nologo=true"
-
-- id: "rhino-compute-api"
-  title: "Rhino.Compute Headless API Wrapper"
-  subtitle: "Cloud Geometry Processing · SaaS Infrastructure"
-  year: "2022"
-  status: "Production"
-  tags: ["Python", "Rhino.Compute", "API", "Cloud"]
-  category: "tool"
+    - label: "Project Area"
+      value: "65,000 sqm"
+    - label: "Buildings"
+      value: "5"
+    - label: "Certification"
+      value: "LEED Silver"
+  image: "https://placehold.co/800x500/0a0a0a/00ff88?text=RESEARCH+COMPLEX&font=roboto"
+  image_alt: "Institutional campus architecture construction documentation"
   featured: false
-  description: >
-    A FastAPI wrapper around Rhino.Compute enabling headless parametric
-    geometry processing at cloud scale. Architects submit Grasshopper
-    definitions via REST endpoints; outputs are returned as IFC, OBJ, or
-    glTF. Handles 600+ concurrent geometry jobs on AWS ECS with auto-scaling,
-    enabling non-Rhino teams to consume parametric geometry in web pipelines.
-  metrics:
-    - label: "Concurrent Jobs (peak)"
-      value: "600+"
-    - label: "Avg. Response Time"
-      value: "1.2s"
-    - label: "Supported Output Formats"
-      value: "8"
-    - label: "Uptime SLA"
-      value: "99.95%"
-  tech: ["Python", "FastAPI", "Rhino.Compute", "Docker", "AWS ECS"]
-  image: "https://image.pollinations.ai/prompt/python-api-code-dark-server-architecture-computation-abstract?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/code-scripting-cloud-architecture-dark-nodes?width=400&height=250&nologo=true"
-
-- id: "meridian-tower"
-  title: "MERIDIAN — 480m Supertall Study"
-  subtitle: "Structural–Architectural Integration · Seoul"
-  year: "2022"
-  status: "Concept / Research"
-  tags: ["Supertall", "Structural", "Generative", "BIM"]
-  category: "tower"
-  featured: false
-  description: >
-    A speculative design study for a 480m mixed-income supertall in Seoul's
-    Yeouido financial district, exploring the integration of outrigger truss
-    geometry directly into the architectural expression. Structural topology
-    was co-evolved with programme distribution using a custom Grasshopper
-    solver, producing a building section where structure, skin, and space
-    are inseparable.
-  metrics:
-    - label: "Tower Height"
-      value: "480m"
-    - label: "Floors"
-      value: "108"
-    - label: "Structural Iterations"
-      value: "2,100"
-    - label: "Programme Types"
-      value: "6"
-  tech: ["Grasshopper", "Karamba3D", "Rhino 3D", "Python", "Revit"]
-  image: "https://image.pollinations.ai/prompt/supertall-skyscraper-480m-seoul-architectural-concept-dark-cinematic?width=800&height=500&nologo=true"
-  thumb: "https://image.pollinations.ai/prompt/skyscraper-tower-structural-generative-dark-abstract?width=400&height=250&nologo=true"
