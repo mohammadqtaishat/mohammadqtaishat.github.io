@@ -8,8 +8,8 @@ author:
   location: "Orland Park, IL"
   linkedin: "https://www.linkedin.com/in/mohammad-qtaishat-132a00109/"
 
+url: "https://qtaishat.com"
 baseurl: ""
-url: ""
 
 markdown: kramdown
 highlighter: rouge
