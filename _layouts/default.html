@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="null">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ site.description }}" />
+  <title>
+    {% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}
+  </title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+  {% seo %}
+</head>
+
+<body>
+
+  <!-- Grid overlay (purely decorative) -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- ===== SITE HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-wordmark" aria-label="{{ site.title }} — home">
+        <span class="wordmark-title">{{ site.title }}</span>
+        <span class="wordmark-tag">{{ site.tagline }}</span>
+      </a>
+
+      <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#profile" class="nav-link">Profile</a>
+        <a href="mailto:{{ site.author.email }}" class="nav-link nav-link--contact">Contact</a>
+      </nav>
+    </div>
+    <!-- Signal bar -->
+    <div class="header-signal" aria-hidden="true">
+      <span class="signal-label">SYS_ONLINE</span>
+      <span class="signal-dot"></span>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content" role="main">
+    {{ content }}
+  </main>
+
+  <!-- ===== SITE FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-label">Location</p>
+        <p class="footer-value">{{ site.author.location }}</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Contact</p>
+        <a href="mailto:{{ site.author.email }}" class="footer-value footer-link">
+          {{ site.author.email }}
+        </a>
+      </div>
+      <div class="footer-col footer-col--right">
+        <p class="footer-label">Index</p>
+        <p class="footer-value footer-mono">
+          {{ site.time | date: "%Y" }} / NULL / v2.4.1
+        </p>
+      </div>
+    </div>
+    <div class="footer-rule">
+      <span class="footer-copy">
+        © {{ site.time | date: "%Y" }} {{ site.author.name }}
+      </span>
+      <span class="footer-sys" aria-hidden="true">
+        PROCESS COMPLETE // EOF
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
