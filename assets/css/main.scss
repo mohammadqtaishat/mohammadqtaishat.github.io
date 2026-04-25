@@ -318,14 +318,15 @@ body:has(button:hover) .cursor {
   text-transform: uppercase;
   margin-bottom: 3rem;
   animation: fadeUp 0.8s 0.1s ease both;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-name-first,
 .hero-name-last {
   display: block;
-  font-size: clamp(2.5rem, 7.5vw, 9rem);
+  font-size: clamp(4.5rem, 13vw, 16rem);
   position: relative;
-  white-space: nowrap;
 }
 
 .hero-name-first { color: var(--text); }
