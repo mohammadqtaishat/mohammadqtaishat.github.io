@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
 title: Mohammad Qtaishat
-description: Portfolio
+email: mohammadqtaishat95@gmail.com
+description: >-
+  Portfolio and professional architecture documentation.
+theme: minima
+header_pages:
+  - index.md
+  - experience.md
+  - technical_skills.md
