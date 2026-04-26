@@ -336,10 +336,12 @@ body:has(button:hover) .cursor {
   position: relative;
   z-index: 2;
   container-type: inline-size;
+  container-name: hero;
   max-width: var(--max-width);
+  width: min(100%, var(--max-width));
   margin: 0 auto;
   padding: 0 var(--gutter);
-  width: 100%;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -368,29 +370,31 @@ body:has(button:hover) .cursor {
   margin-bottom: 3rem;
   animation: fadeUp 0.8s 0.1s ease both;
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
-  max-width: 100vw;
 }
 
 /* Container-query sizing — pinned to the 1400px container, never overflows */
 .hero-name-first,
 .hero-name-last {
-  font-family: 'Syne', sans-serif !important;
-  font-weight: 800 !important;
   display: block;
-  font-size: clamp(2rem, 7vw, 8rem) !important;
+  /* 
+    MOHAMMAD is 8 chars — at ~0.58em per char in Syne 800,
+    8 chars × 0.58 = 4.64em effective width per 1em of font-size.
+    We want it to fill ~90% of the container.
+    Safe responsive value: clamp keeps it from ever being tiny or huge.
+  */
+  font-size: clamp(2rem, 9.5cqw, 9.5rem);
   white-space: nowrap;
-  letter-spacing: -0.02em;
-  line-height: 0.8;
-  padding-right: 0.2em;
-  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip;
+  width: 100%;
 }
 
-/* Fallback for browsers without cqw support */
 @supports not (font-size: 1cqw) {
   .hero-name-first,
   .hero-name-last {
-    font-size: clamp(2.8rem, 7vw, 10rem);
+    font-size: clamp(2rem, 6.2vw, 9.5rem);
   }
 }
 
