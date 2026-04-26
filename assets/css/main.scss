@@ -384,6 +384,7 @@ body:has(button:hover) .cursor {
   .hero-name-first,
   .hero-name-last {
     font-size: clamp(2.8rem, 7vw, 10rem);
+    overflow: hidden;
   }
 }
 
