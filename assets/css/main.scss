@@ -373,7 +373,6 @@ body:has(button:hover) .cursor {
 /* Container-query sizing — pinned to the 1400px container, never overflows */
 .hero-name-first,
 .hero-name-last {
-  font-family: 'Syne', sans-serif !important;
   display: block;
   font-size: clamp(2.5rem, 10cqw, 10rem);
   white-space: nowrap;
