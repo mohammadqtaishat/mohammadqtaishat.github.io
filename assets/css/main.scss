@@ -376,7 +376,6 @@ body:has(button:hover) .cursor {
   display: block;
   font-size: clamp(2.8rem, 11cqw, 10rem);
   white-space: nowrap;
-  overflow: hidden;
 }
 
 /* Fallback for browsers without cqw support */
@@ -384,7 +383,6 @@ body:has(button:hover) .cursor {
   .hero-name-first,
   .hero-name-last {
     font-size: clamp(2.8rem, 7vw, 10rem);
-    overflow: hidden;
   }
 }
 
