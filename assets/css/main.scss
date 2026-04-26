@@ -374,8 +374,10 @@ body:has(button:hover) .cursor {
 .hero-name-first,
 .hero-name-last {
   display: block;
-  font-size: clamp(2.8rem, 11cqw, 10rem);
+  font-size: clamp(2.5rem, 10cqw, 10rem);
   white-space: nowrap;
+  line-height: 0.85;
+  padding-right: 0.2em;
 }
 
 /* Fallback for browsers without cqw support */
