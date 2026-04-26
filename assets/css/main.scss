@@ -335,16 +335,13 @@ body:has(button:hover) .cursor {
 .hero-inner {
   position: relative;
   z-index: 2;
-  container-type: inline-size;
-  container-name: hero;
   max-width: var(--max-width);
-  width: min(100%, var(--max-width));
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--gutter);
   box-sizing: border-box;
   overflow: hidden;
 }
-
 .hero-label {
   display: inline-flex;
   align-items: center;
@@ -361,7 +358,6 @@ body:has(button:hover) .cursor {
 .label-bracket { color: var(--text-muted); }
 
 .hero-name {
-  display: block;
   font-family: var(--font-display);
   font-weight: 800;
   line-height: 0.9;
@@ -370,25 +366,28 @@ body:has(button:hover) .cursor {
   margin-bottom: 3rem;
   animation: fadeUp 0.8s 0.1s ease both;
   width: 100%;
-  max-width: 100%;
   overflow: hidden;
+  /* Force Syne explicitly here as a failsafe */
+  font-family: 'Syne', var(--font-display), sans-serif;
 }
-
 /* Container-query sizing — pinned to the 1400px container, never overflows */
 .hero-name-first,
 .hero-name-last {
   display: block;
-  /* 
-    MOHAMMAD is 8 chars — at ~0.58em per char in Syne 800,
-    8 chars × 0.58 = 4.64em effective width per 1em of font-size.
-    We want it to fill ~90% of the container.
-    Safe responsive value: clamp keeps it from ever being tiny or huge.
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  /*
+    MOHAMMAD = 8 chars in Syne 800.
+    Syne 800 has a cap-height ratio ~0.72 and avg char width ~0.65em.
+    8 chars × 0.65 + letter-spacing(-0.04em × 8) = ~4.88em per 1em font-size.
+    Target: fill the inner container (max 1400px minus 2 × gutter ~120px = ~1280px).
+    1280px ÷ 4.88 ≈ 262px = 16.4rem at 16px base.
+    We cap at 8rem to stay safely within gutter-padded container on all screens.
   */
-  font-size: clamp(2rem, 9.5cqw, 9.5rem);
+  font-size: clamp(2.2rem, 6vw, 8rem);
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip;
-  width: 100%;
+  max-width: 100%;
 }
 
 @supports not (font-size: 1cqw) {
@@ -404,8 +403,8 @@ body:has(button:hover) .cursor {
 
 /* Gold outlined second line — no pseudo-element bleed */
 .hero-name-last {
-  color: var(--accent) !important;
-  -webkit-text-stroke: 1.5px var(--accent) !important;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent);
   opacity: 0.65;
 }
 
